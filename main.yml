@@ -5,7 +5,8 @@
   - name: Print all available facts
     ansible.builtin.debug:
       var: ansible_facts
-
+  - name: Ping hosts
+    ansible.builtin.ping:
   - name: Sync repositories and update world
     community.general.portage:
       package: '@world'
