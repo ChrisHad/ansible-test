@@ -1,0 +1,11 @@
+---
+- name: Create user and SSH key
+  hosts: all
+  tasks:
+  - name: Create user
+    user:
+      name: "{username}"
+      generate_ssh_key: true
+      ssh_key_comment: "{username}@{hostname}"
+      ssh_key_file: "test_id_rsa"
+  

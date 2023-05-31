@@ -7,9 +7,11 @@
       var: ansible_facts
   - name: Ping hosts
     ansible.builtin.ping:
-  - name: Sync repositories and update world
-    community.general.portage:
-      package: '@world'
-      update: true
-      deep: true
-      sync: true
+
+#  - name: Sync repositories and update world
+#    community.general.portage:
+#      package: '@world'
+#      update: true
+#      deep: true
+#      sync: true
+- import_playbook: create-user.yml
